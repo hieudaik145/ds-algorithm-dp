@@ -8,7 +8,7 @@ package com.github.hieuvv.dp;
 // ==========
 public class FactoryMethod {
 
-    public static void main(String[] args) {
+    public void main() {
 //        Creator creator = new ConcreteCreatorB();
 //        creator.someOperation();
 //        creator = new ConcreteCreatorA();
@@ -16,12 +16,16 @@ public class FactoryMethod {
 //        Product productA = creator.createProduct();
 //        productA.doStuff();
 
-        System.setProperty("os.name", "Webs");
+        System.setProperty("os.name", "Web");
         Application app = new Application();
         app.main();
 
     }
-}
+
+    public static void main(String[] args) {
+        FactoryMethod test = new FactoryMethod();
+        test.main();
+    }
 
 // =========================================================================
 // PRODUCT
@@ -235,4 +239,6 @@ class Application {
         this.initialize();
         dialog.render();
     }
+}
+
 }
